@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/DonSaliere/ES_Test_Front/precache-manifest.32609f8e79a8a999b4806513c8456e73.js"
+  "/DonSaliere/ES_Test_Front/precache-manifest.6a4346bc5d6f5fc1154affcdb750fe92.js"
 );
 
 self.addEventListener('message', (event) => {
