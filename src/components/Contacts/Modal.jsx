@@ -71,7 +71,7 @@ const Example = (props) => {
         if (props.selectedID === null) {
             return (
                 <div className={'form-group'}>
-                    Вы не выбрали новость!!!
+                    Вы не выбрали контакт!!!
                 </div>
             )
         } else {
@@ -115,13 +115,13 @@ const Example = (props) => {
         if (props.selectedID === null) {
             return (
                 <div className={'form-group'}>
-                    Вы не выбрали новость!!!
+                    Вы не выбрали Контакт!!!
                 </div>
             )
         } else {
             return (
                 <div className={'form-group'}>
-                    Удалить новость?
+                    Удалить Контакт?
                 </div>
 
             )
@@ -167,7 +167,7 @@ const Example = (props) => {
 
             <Modal show={add} onHide={handleCloseAdd}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Новая новость</Modal.Title>
+                    <Modal.Title>Новый контакт</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className={'form-group'}>
@@ -175,7 +175,6 @@ const Example = (props) => {
                             onChange={onChangeTextName}
                             ref={newNameElement}
                             placeholder={"Имя"}
-                        //value={props.newNameText}
                         />
                     </div>
                     <div className={'form-group'}>
@@ -183,7 +182,6 @@ const Example = (props) => {
                             onChange={onChangeSurnameText}
                             ref={newSurnameElement}
                             placeholder={"Фамилия"}
-                        //value={props.newSurnameElementription}
                         />
                     </div>
                     <div className={'form-group'}>
@@ -209,7 +207,7 @@ const Example = (props) => {
 
             <Modal show={chenge} onHide={handleCloseChenge}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Изменить новость</Modal.Title>
+                    <Modal.Title>Изменить контакт</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     {chengModalBody()}
