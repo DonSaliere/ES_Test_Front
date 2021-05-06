@@ -59,7 +59,7 @@ class Login extends React.Component {
                     </div>
                     <div className="form-group">
                         <input
-                            type="text"
+                            type="password"
                             className="form-control"
                             name="password"
                             value={password}
