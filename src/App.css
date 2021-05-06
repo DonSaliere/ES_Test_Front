@@ -1,13 +1,13 @@
 .nav-bar {
   background-color: #24292e;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   overflow: hidden;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-  
+
 .nav-bar a {
   color: #aef9d7;
   text-align: center;
@@ -15,11 +15,11 @@
   text-decoration: none;
   font-size: 16px;
 }
-  
+
 .nav-bar a.active {
   color: #fff;
 }
-  
+
 .nav-bar a:hover {
   color: rgb(243, 223, 136);
 }
@@ -27,6 +27,7 @@
 .align-center {
   text-align: center;
 }
+
 .item-add-form {
   margin-top: 30px;
   margin-bottom: 10px;

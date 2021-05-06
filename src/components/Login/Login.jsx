@@ -28,7 +28,7 @@ class Login extends React.Component {
             this.props.loginInCreator(username);
         }
         else {
-            this.setState({errorMsg: 'Имя или пароль введены не верно'})
+            this.setState({ errorMsg: 'Имя или пароль введены не верно' })
         }
     };
 
@@ -72,7 +72,7 @@ class Login extends React.Component {
                     </button>
                     <div className={s.errorMessage}>
                         {this.state.errorMsg}
-                     </div>
+                    </div>
                 </form>
             </div>
         )

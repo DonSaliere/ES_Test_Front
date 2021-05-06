@@ -6,14 +6,6 @@ const mapStateToProps = state => ({
     isAuth: state.auth.isAuth
 })
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         logIn: (text) => {
-//             dispatch(loginInCreator(text));
-//         }
-//     }
-// }
-
 const mapDispatchToProps =  {
     loginInCreator
 

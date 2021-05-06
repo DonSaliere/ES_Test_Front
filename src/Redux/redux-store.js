@@ -1,10 +1,10 @@
 import { createStore, combineReducers} from "redux";
 import authReducer from "./auth-reducer";
-import newsReducer from "./news-reducer";
+import contactsReducer from "./contacts-reducer";
 
 let reducers = combineReducers({
     auth: authReducer,
-    news: newsReducer
+    contacts: contactsReducer
 });
 
 let store  = createStore(reducers);

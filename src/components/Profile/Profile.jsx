@@ -4,7 +4,7 @@ import p from './Profile.module.css';
 const Profile = (props) => {
   let logOut = () => {
     props.logOut();
-};
+  };
   return (
     <React.Fragment>
       <div className={`${p.container} ${'text-center'}`}>
