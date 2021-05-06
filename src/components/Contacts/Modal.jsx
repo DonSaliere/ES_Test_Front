@@ -11,8 +11,6 @@ const Example = (props) => {
     const handleShowAdd = () => {
         props.updateContact();
         setShow(true);
-        //props.updateNewsText("");
-        //props.updateNewsDesc("");
 
     };
 
