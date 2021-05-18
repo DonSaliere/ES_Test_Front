@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\bin\Debug\netcoreapp2.1\Contactcs_API.deps.json
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\bin\Debug\netcoreapp2.1\Contactcs_API.runtimeconfig.json
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\bin\Debug\netcoreapp2.1\Contactcs_API.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\bin\Debug\netcoreapp2.1\Contactcs_API.dll
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\bin\Debug\netcoreapp2.1\Contactcs_API.pdb
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\obj\Debug\netcoreapp2.1\Contactcs_API.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\obj\Debug\netcoreapp2.1\Contactcs_API.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\obj\Debug\netcoreapp2.1\Contactcs_API.RazorAssemblyInfo.cache
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\obj\Debug\netcoreapp2.1\Contactcs_API.RazorAssemblyInfo.cs
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\obj\Debug\netcoreapp2.1\Contactcs_API.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\obj\Debug\netcoreapp2.1\Contactcs_API.AssemblyInfo.cs
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\obj\Debug\netcoreapp2.1\Contactcs_API.RazorTargetAssemblyInfo.cache
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\obj\Debug\netcoreapp2.1\Contactcs_API.dll
+C:\Users\Admin\source\repos\Contactcs_API\Contactcs_API\obj\Debug\netcoreapp2.1\Contactcs_API.pdb
