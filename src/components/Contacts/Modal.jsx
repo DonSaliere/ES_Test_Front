@@ -26,12 +26,32 @@ const Example = (props) => {
     let newEmailElement = React.createRef();
     let newBirthdayElement = React.createRef();
 
-    const onAddNews = () => {
-        props.addContact();
+    const onAddContact = () => {
+        const addNewContact = {
+            name: props.newNameText,
+            surname: props.newSurnameText,
+            email: props.newEmailText,
+            birthday: props.newbirthdayText
+        };
+        const contactService = props.ContactService;
+        contactService.getUpdate(addNewContact)
+            .then((res) => props.addContact(res));
+
         handleCloseAdd();
     }
 
     let onUpdateContacts = () => {
+        const chengeContact = {
+            id: props.selectedID,
+            name: props.newNameText,
+            surname: props.newSurnameText,
+            email: props.newEmailText,
+            birthday: props.newbirthdayText
+        };
+
+        const contactService = props.ContactService;
+        contactService.getUpdate(chengeContact);
+
         props.updateContact();
         handleCloseChenge();
     }
@@ -61,6 +81,9 @@ const Example = (props) => {
     }
 
     let onDeleteContacts = () => {
+        const contactService = props.ContactService;
+        contactService.getDelete(props.selectedID);
+
         props.deleteContact();
         handleCloseDel();
     }
@@ -199,7 +222,7 @@ const Example = (props) => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseAdd}>Отмена</Button>
-                    <Button variant="primary" onClick={onAddNews}>Применить</Button>
+                    <Button variant="primary" onClick={onAddContact}>Применить</Button>
                 </Modal.Footer>
             </Modal>
 

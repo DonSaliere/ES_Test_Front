@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Contacts from './Contacts';
-import { addContactCreator, updateContactCreator, updateContactNameTextCreator, deleteContactCreator, updateContactIdCreator, updateContactSurnameTextCreator, updateContactEmailTextCreator, updateContactBirthdayTextCreator } from '../../Redux/contacts-reducer';
+import { loadedContactCreator, addContactCreator, updateContactCreator, updateContactNameTextCreator, deleteContactCreator, updateContactIdCreator, updateContactSurnameTextCreator, updateContactEmailTextCreator, updateContactBirthdayTextCreator } from '../../Redux/contacts-reducer';
 import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 
 // let AuthRedirectComponent = withAuthRedirect(News);
@@ -17,8 +17,11 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => {
   return {
-    addContact: () => {
-      dispatch(addContactCreator());
+    loadedContact: (newContact) => {
+      dispatch(loadedContactCreator(newContact));
+    },
+    addContact: (id) => {
+      dispatch(addContactCreator(id));
     },
     updateContact: () => {
       dispatch(updateContactCreator());

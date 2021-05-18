@@ -1,3 +1,4 @@
+const CONTACT_LOADED = 'CONTACT_LOADED';
 const ADD_CONTACT = 'ADD_CONTACT';
 const DELETE_CONTACT = 'DELETE_CONTACT';
 const UPDATE_NAME_TEXT = 'UPDATE_NAME_TEXT';
@@ -10,29 +11,7 @@ const UPDATE_ID = 'UPDATE_ID';
 
 
 const initialState = {
-  ContactsData: [
-    { id: 0, name: 'Михаил', surname: 'Белоусов', email: 'o@outlook.com', birthday: '06.05.1990' },
-    { id: 1, name: 'Руслан', surname: 'Лапин', email: 'hr6zdl@yandex.ru', birthday: '06.03.1992' },
-    { id: 2, name: 'Павел', surname: 'Исаков', email: 'kaft93x@outlook.com', birthday: '29.06.1995' },
-    { id: 3, name: 'Пётр', surname: 'Мельников', email: 'dcu@yandex.ru', birthday: '11.05.1998' },
-    { id: 4, name: 'Людовик', surname: 'Тетерин', email: '19dn@outlook.com', birthday: '25.06.1998' },
-    { id: 5, name: 'Витольд', surname: 'Алчевский', email: 'pa5h@mail.ru', birthday: '06.05.1998' },
-    { id: 6, name: 'Йомер', surname: 'Дзюба', email: '281av0@gmail.com', birthday: '10.05.2002' },
-    { id: 7, name: 'Филипп', surname: 'Жуков', email: '8edmfh@outlook.com', birthday: '13.02.2007' },
-    { id: 8, name: 'Дарий', surname: 'Титов', email: 'sfn13i@mail.ru', birthday: '22.04.2008' },
-    { id: 9, name: 'Цезарь', surname: 'Королёв', email: 'g0orc3x1@outlook.com', birthday: '14.12.2020' },
-    { id: 10, name: 'Алёна', surname: 'Скляренко', email: 'rv7bp@gmail.com', birthday: '17.10.1990' },
-    { id: 11, name: 'Мария', surname: 'Скляренко', email: '93@outlook.com', birthday: '01.09.1991' },
-    { id: 12, name: 'Эльвира', surname: 'Палий', email: 'er@gmail.com', birthday: '09.05.1991' },
-    { id: 13, name: 'Марта', surname: 'Савельева', email: 'o0my@gmail.com', birthday: '06.12.1993' },
-    { id: 14, name: 'Хильда', surname: 'Никонова', email: '715qy08@gmail.com', birthday: '12.05.1994' },
-    { id: 15, name: 'Элеонора', surname: 'Калашникова', email: 'vubx0t@mail.ru', birthday: '08.05.1994' },
-    { id: 16, name: 'Полина', surname: 'Пестова', email: 'wnhborq@outlook.com', birthday: '10.09.1994' },
-    { id: 17, name: 'Жанна', surname: 'Максимова', email: 'gq@yandex.ru', birthday: '15.04.1996' },
-    { id: 18, name: 'Алёна', surname: 'Хитрук', email: 'ic0pu@outlook.com', birthday: '22.09.1996' },
-    { id: 19, name: 'Янина', surname: 'Соловьёва', email: 'o7khr@yandex.ru', birthday: '26.06.1998' },
-    { id: 20, name: 'Шарлота', surname: 'Молчанова', email: '2shlaq@outlook.com', birthday: '07.05.1998' }
-  ],
+  ContactsData: [],
   newNameText: "",
   newSurnameText: "",
   newEmailText: "",
@@ -43,9 +22,14 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case CONTACT_LOADED:
+      return {
+        ...state,
+        ContactsData: action.payload
+      };
     case ADD_CONTACT: {
       const newContacts = {
-        id: Math.max(...state.ContactsData.map(i => i.id)) + 1,
+        id: action.newId,
         name: state.newNameText,
         surname: state.newSurnameText,
         email: state.newEmailText,
@@ -144,7 +128,8 @@ export default (state = initialState, action) => {
   }
 }
 
-export const addContactCreator = () => ({ type: ADD_CONTACT });
+export const loadedContactCreator = (newContact) => ({ type: CONTACT_LOADED, payload: newContact });
+export const addContactCreator = (id) => ({ type: ADD_CONTACT, newId: id });
 export const updateContactCreator = () => ({ type: UPDATE_CONTACT });
 export const updateContactNameTextCreator = (name) => ({ type: UPDATE_NAME_TEXT, newName: name });
 export const updateContactSurnameTextCreator = (sur) => ({ type: UPDATE_SURNAME, newSurname: sur });
